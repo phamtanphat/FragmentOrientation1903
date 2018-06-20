@@ -18,11 +18,13 @@ public class FragmentList extends ListFragment {
     View view;
     ArrayList<String> mangten = new ArrayList<>();
     ArrayAdapter arrayAdapter;
+    Nhandulieu nhandulieu;
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.fragment_list,container,false);
 
+        nhandulieu = (Nhandulieu) getActivity();
         mangten.add("Nguyen Van A");
         mangten.add("Nguyen Van B");
         mangten.add("Nguyen Van C");
@@ -38,7 +40,7 @@ public class FragmentList extends ListFragment {
         getListView().setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-
+               nhandulieu.ReciveData(mangten.get(position));
             }
         });
         super.onActivityCreated(savedInstanceState);

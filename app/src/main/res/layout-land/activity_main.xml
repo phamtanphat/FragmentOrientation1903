@@ -10,4 +10,10 @@
         android:layout_weight="4"
         android:layout_width="0dp"
         android:layout_height="match_parent"/>
+    <fragment
+        android:id="@+id/fragmentChitietLandscape"
+        android:name="com.ptp.phamtanphat.fragmentorientation1903.FragmentChitiet"
+        android:layout_weight="6"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"/>
 </LinearLayout>
